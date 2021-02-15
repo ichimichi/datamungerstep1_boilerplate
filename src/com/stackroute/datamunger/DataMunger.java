@@ -181,7 +181,7 @@ public class DataMunger {
 
     public String[] getGroupByFields(final String queryString) {
         if (!queryString.contains("group by")) {
-            return new String[0];
+            return null;
         }
         return queryString.toLowerCase(Locale.ROOT).split("\\sgroup by")[1].trim().split(",");
     }
